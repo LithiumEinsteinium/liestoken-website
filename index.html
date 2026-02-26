@@ -232,10 +232,21 @@
         </div>
     </footer>
     
-    <!-- Jupiter Swap Button -->
-    <a href="https://jup.ag/swap?inputCurrency=sol" target="_blank" class="telegram-btn" style="background: linear-gradient(90deg, #00ff88, #00ccff); color: #000;">
-        🔄 Buy $LiEs on Jupiter
-    </a>
+    <!-- Jupiter Plugin -->
+    <script src="https://plugin.jup.ag/plugin-v1.js" defer></script>
+    
+    <div id="jupiter-container" style="width: 100%; height: 500px; margin: 20px auto; max-width: 450px;"></div>
+    
+    <script>
+        window.addEventListener("load", () => {
+            window.Jupiter.init({
+                displayMode: "integrated",
+                integratedTargetId: "jupiter-container",
+                fixedInputMint: true,
+                inputMint: "So11111111111111111111111111111111111111112", // WSOL
+            });
+        });
+    </script>
     
     <script>
         // Contract address will be updated after token deployment
