@@ -151,14 +151,6 @@
             color: #444;
         }
         
-        /* Jupiter Station Widget */
-        .jup-station {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-        }
-        
         @media (max-width: 600px) {
             .logo {
                 font-size: 2rem;
@@ -166,10 +158,6 @@
             .buy-section {
                 padding: 20px;
                 margin: 40px 10px;
-            }
-            .jup-station {
-                bottom: 10px;
-                right: 10px;
             }
         }
     </style>
@@ -244,16 +232,12 @@
         </div>
     </footer>
     
-    <!-- Jupiter Station Widget -->
-    <div class="jup-station">
-        <iframe 
-            src="https://jup.ag/station?inputCurrency=sol"
-            width="54"
-            height="54"
-            style="border: none; border-radius: 50%; box-shadow: 0 4px 20px rgba(0,255,136,0.4);"
-            allow="clipboard-write"
-        ></iframe>
-    </div>
+    <!-- Jupiter Widget -->
+    <jup-widget 
+        display-mode="widget" 
+        widget-style='{"position":"bottom-right"}'
+    ></jup-widget>
+    <script src="https://jup.ag widget/v4/widget.js"></script>
     
     <script>
         // Contract address will be updated after token deployment
